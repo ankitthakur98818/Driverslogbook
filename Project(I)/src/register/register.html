@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./register.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <script src="./register.js"></script>
+    <div class="container-1">
+        <form id="form" action="../php/database.php" method="post">
+            <h2>Registration</h2>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" id="fullnameH" name="fullnameH" placeholder="Full name" >
+                    <i class='bx bxs-user'></i>
+                    <span id="name-error" class="error"></span>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" id="usernameH" name="usernameH" placeholder="Username" >
+                    <i class='bx bxs-user'></i>
+                    <span id="username-error" class="error"></span>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" id="emailH" name="emailH" placeholder="example@gmail.com" >
+                    <i class='bx bx-envelope'></i>
+                    <span id="email-error" class="error"></span>
+                </div>
+
+                <div class="input-field">
+                    <input type="number" id="phoneH" name="phoneH" placeholder="Phone number" >
+                    <i class='bx bxs-phone'></i>
+                    <span id="number-error" class="error"></span>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" id="passwordH" name="passwordH" placeholder="Password" >
+                    <i class='bx bxs-lock'></i>
+                    <span id="password-error" class="error"></span>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" id="confirmpasswH" name="confirmpasswH" placeholder="Confirm password" >
+                    <i class='bx bxs-lock'></i>
+                    <span id="confirm-password-error" class="error"></span>
+                </div>
+            </div>
+
+            <label>
+                <input type="checkbox" required>
+                I agree to the terms and conditions
+            </label>
+
+            <button type="submit" class="button" name="SignUp">Sign Up</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+header::after ::-webkit-scrollbar-track-piece{
+    border-color: black;
+    color: white;
+}
+
+header img{
+    height:40px;
+    width: 40px;
+    
+}
+
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    text-align: center;
+    margin-left:40px;
+}
+
+.navigation a:last-child{
+    margin-left: 0;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: purple;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;   
+}
+
+.navigation a:last-child::after{
+   display:none;
+}
+
+.navigation a:hover::after{
+    transform-origin:left;
+    transform: scaleX(1);
+
+}
+
+
+
+.navigation .btn-poping{
+    width: 110px;
+    height:40px;
+    background: transparent;
+    border: 3px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    margin-left: 60px;
+    transition: .5s;
+}
+
+.navigation .btn-poping:hover{
+    background-color: white;
+    color: black;
+}
+
+.container { 
+
+    text-align: top;
+    color: white;
+
+}
+#time{
+    display: flex;
+    gap:30px;
+
+}
+#time .circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#time .circle svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+
+}
+
+#time .circle svg circle{
+
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 8;
+    stroke:#282828;
+    transform: translate(5px, 5px);
+
+}
+
+#time .circle svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    
+
+}
+
+#time div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    font-size: 1.5em;
+
+
+}
+
+#time div span{
+    position: absolute;
+    transform: translateX(-50%) translateY(-10px);
+    font-size: 0.35em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+}
+
+#time .dots{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1000;
+
+}
+
+#time .dots::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr),
+    0 0 60px var(--clr);
+    transform: scale(0.9);
+    z-index: 1000;
+}
+
+.h2{ 
+    display: flex;
+    font-size: 8em;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    line-height: 0.6em;
+}
+

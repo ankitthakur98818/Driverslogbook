@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashoard</title>
+    <link rel="stylesheet" href="./admindash.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <img src="../../img/5Umdrd-CSpiod1O834yAYw.webp">
+
+        </div>
+
+        <div class="right">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="../services/worktime.html">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="../../php/logout.php">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>All Driver Logs</h2>
+        <div class="container-1">
+            <label for="search" method="GET" action="">Search:</label>
+            <input type="text" id="search" name="search">
+            <button type="submit">Search</button>
+            </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Killometers Driven</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+
+
+</body>
+</html>
+<?php
+include '../php.databasecon.php';
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+$sql = "SELECT * FROM logs WHERE id LIKE '%$search%' OR date LIKE '%$search%' OR kilometers_driven LIKE '%$search%' OR duration LIKE '%$search%'";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>
+                <td>{$row['id']}</td>
+                <td>{$row['date']}</td>
+                <td>{$row['kilometers_driven']}</td>
+                <td>{$row['duration']}</td>
+              </tr>";
+    }
+} else {
+    echo "<tr><td colspan='4'>No records found</td></tr>";
+}
+$conn->close();
+?>
+
+?>

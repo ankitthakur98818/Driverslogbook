@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver's Log Book</title>
+    <link rel="stylesheet" href="driving.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="left">
+            <img src="../img/5Umdrd-CSpiod1O834yAYw.webp">
+
+        </div>
+
+        <div class="right">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="">Services</a>
+                <ul class="dropdown">
+                    <li><a href="../services/logbook.html">log book</a></li>
+                    <li><a href="../services/driving.html">Work Time</a></li>
+                    <li ><a href="#">Driver Details</a></li>
+                    <li><a href="../Vehicle details/vehicle.html">Vehicle Details</a></li>
+                    <li><a hrf="#">Report</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Notice</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Contact</a>
+                    <ul class="dropdown">
+                        <li><a href="#"></a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="../../php/logout.php">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container">
+    <div class="container-1">
+        <!-- Top Indicators -->
+        <div class="top-bar">
+            <div class="status in-stationary">IN STATIONARY</div>
+            <div class="icon">🚚</div>
+        </div>
+
+        <!-- Drive Info -->
+        <div class="info-bar">
+            <div class="info-item">
+                <span class="info-value">0</span>
+                <span class="info-label">Km/h</span>
+            </div>
+            <div class="info-item">
+                <span class="info-value" id="drive-time">0h 0min</span>
+                <span class="info-label">Drive Time</span>
+            </div>
+            <div class="info-item">
+                <span class="info-value" id="idle-time">0sec</span>
+                <span class="info-label">Idle Time</span>
+            </div>
+        </div>
+
+        <!-- Main Timer -->
+        <div class="main-timer">
+            <div class="country-info">Np Nepal - 70 Hours / 7 Days</div>
+            <div class="timer-circle">
+                <span id="timer">00:00</span>
+                <div class="status-label">DRIVE</div>
+            </div>
+        </div>
+
+        <!-- Driving Status -->
+        <div class="status-bar">
+            <button id="toggle-drive" class="status-button driving">DRIVING</button>
+        </div>
+    </div>
+    </div>
+    <script src="driving.js"></script>
+</body>
+</html>
